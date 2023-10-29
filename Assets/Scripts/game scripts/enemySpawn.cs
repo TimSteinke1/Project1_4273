@@ -6,7 +6,7 @@ using System;
 public class enemySpawn : MonoBehaviour
 {
     public Transform SpawnPoint1, SpawnPoint2, SpawnPoint3, SpawnPoint4, SpawnPoint5;
-    public GameObject enemy1Prefab, enemy2Prefab, enemy3Prefab;
+    public GameObject enemy1Prefab, enemy2Prefab, enemy3Prefab, powerUp1Prefab, powerUp2Prefab;
     private GameObject spawnedEnemy;
     public float spawnMultiplier;
 
@@ -24,8 +24,9 @@ public class enemySpawn : MonoBehaviour
     {
         System.Random rnd = new System.Random();
         int spawnPoint = rnd.Next(1, 6);
-        int enemyChoice = rnd.Next(1, 11);
-        
+        int enemyChoice = rnd.Next(1, 12);
+        int powerUp = rnd.Next(1,3);
+
         /* Enemy randomizer, weighted toward choosing lower-class enemies */
         if (enemyChoice > 0 && enemyChoice <= 6) {
             spawnedEnemy = enemy1Prefab;
@@ -36,7 +37,11 @@ public class enemySpawn : MonoBehaviour
                 if (enemyChoice == 10) {
                     spawnedEnemy = enemy3Prefab;
                 } else {
-                    spawnedEnemy = enemy1Prefab;
+                    if(powerUp == 1) {
+                    spawnedEnemy = powerUp1Prefab;
+                } else {
+                    spawnedEnemy = powerUp2Prefab;
+                    }
                 }
             }
         }

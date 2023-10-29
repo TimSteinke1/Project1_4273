@@ -874,7 +874,9 @@ MonoBehaviour:
   enemy1Prefab: {fileID: 7672146633492927997, guid: f5f7bc1fa1df4094cb2663113527395c, type: 3}
   enemy2Prefab: {fileID: 7102992961115693519, guid: 55d2f194ebd06cb4790c0cf79de7b2cf, type: 3}
   enemy3Prefab: {fileID: 7748529825019210208, guid: 8d7b5e3ada42e0749abe3a445d2f9f44, type: 3}
-  spawnMultiplier: 0
+  powerUp1Prefab: {fileID: 487128077179293785, guid: e7037db11cfdcdf4185c8719e0608e7b, type: 3}
+  powerUp2Prefab: {fileID: 8983055183198163201, guid: cc6e6b052c485834fb96344833ba0120, type: 3}
+  spawnMultiplier: 5
 --- !u!1 &310486600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1151,7 @@ GameObject:
   - component: {fileID: 631008418}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

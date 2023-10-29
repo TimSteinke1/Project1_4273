@@ -13,10 +13,12 @@ public class bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.up * speed;
+        
     }
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
+        Physics2D.IgnoreLayerCollision(1, 2);
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }
