@@ -12,13 +12,13 @@ public class bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.right * speed;
         
     }
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
-        Physics2D.IgnoreLayerCollision(1, 2);
+        Physics2D.IgnoreLayerCollision(1,2);
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }
